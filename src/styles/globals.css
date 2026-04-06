@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { font-family: 'Inter', sans-serif; color: #0D1B2A; background: #fff; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; }
+}
+
+@layer utilities {
+  .section-padding { @apply py-16 md:py-24; }
+  .container-wide { @apply max-w-content mx-auto px-4 md:px-8; }
+  .btn-primary { @apply inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors shadow-sm; }
+  .btn-outline { @apply inline-flex items-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors; }
+  .btn-accent { @apply inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors shadow-sm; }
+  .card { @apply bg-white rounded-xl border border-gray-100 shadow-card hover:shadow-card-hover transition-all duration-300; }
+  .input-field { @apply w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-sm transition-all bg-white; }
+}
